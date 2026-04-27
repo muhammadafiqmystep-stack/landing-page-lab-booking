@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Booking Portal</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+  <style>
+    :root {
+      --sky-blue: #87ceeb;
+      --sky-blue-dark: #4da6d9;
+      --leaf-green: #4f9d69;
+      --leaf-green-soft: #dff5e8;
+      --surface: #f4fbff;
+      --text-dark: #17415a;
+    }
+
+    body {
+      background: linear-gradient(180deg, #e7f8ff 0%, #f5fff7 100%);
+      color: var(--text-dark);
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--sky-blue) 0%, #b8ecff 55%, #d8f8e4 100%);
+      border-radius: 1rem;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid #d6eef8;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(23, 65, 90, 0.08);
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--sky-blue-dark);
+      box-shadow: 0 0 0 0.25rem rgba(135, 206, 235, 0.35);
+    }
+
+    .btn-sky {
+      background-color: var(--sky-blue-dark);
+      color: #fff;
+    }
+
+    .btn-sky:hover {
+      background-color: #2f8fbf;
+      color: #fff;
+    }
+
+    .nature-badge {
+      background-color: var(--leaf-green-soft);
+      color: var(--leaf-green);
+      border: 1px solid #bfe8ce;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4 py-md-5">
+    <header class="hero p-4 p-md-5 mb-4 mb-md-5">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-8">
+          <span class="badge nature-badge mb-3">Sky Blue & Nature Theme</span>
+          <h1 class="display-6 fw-bold mb-3">Lab Booking Portal</h1>
+          <p class="lead mb-0">
+            Book labs quickly, manage reservations efficiently, and submit complaints
+            in one responsive platform.
+          </p>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="section-card p-3 p-md-4">
+            <h2 class="h5 fw-semibold mb-3">Admin Access</h2>
+            <p class="mb-2">Manage bookings, labs, and scheduling details.</p>
+            <p class="mb-0 text-secondary">Use your staff account to continue.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="row g-4">
+      <section class="col-12 col-lg-7">
+        <div class="section-card p-4 h-100">
+          <h2 class="h4 mb-3">Book a Lab</h2>
+          <p class="text-secondary mb-4">
+            Fill in your booking details. All fields are optimized for desktop and mobile views.
+          </p>
+          <form class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="lab" class="form-label">Lab</label>
+              <select id="lab" class="form-select">
+                <option selected>Select a lab</option>
+                <option>Computer Lab A</option>
+                <option>Electronics Lab B</option>
+                <option>Science Lab C</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="date" class="form-label">Date</label>
+              <input id="date" type="date" class="form-control">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="time" class="form-label">Time</label>
+              <input id="time" type="time" class="form-control">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="user" class="form-label">User</label>
+              <input id="user" type="text" class="form-control" placeholder="Enter user name">
+            </div>
+            <div class="col-12">
+              <label for="purpose" class="form-label">Purpose</label>
+              <input id="purpose" type="text" class="form-control" placeholder="Select a purpose">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="equipment" class="form-label">Equipment</label>
+              <input id="equipment" type="text" class="form-control" placeholder="Select equipment">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="staff" class="form-label">Staff</label>
+              <input id="staff" type="text" class="form-control" placeholder="Select staff">
+            </div>
+            <div class="col-12">
+              <label for="location" class="form-label">Location</label>
+              <input id="location" type="text" class="form-control" placeholder="Select location">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-sky px-4">Submit Booking</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="col-12 col-lg-5">
+        <div class="section-card p-4 h-100">
+          <h2 class="h4 mb-3">Complaint Form</h2>
+          <p class="text-secondary mb-4">
+            Report issues related to lab facilities, equipment, or booking problems.
+          </p>
+          <form class="row g-3">
+            <div class="col-12">
+              <label for="complaintName" class="form-label">Your Name</label>
+              <input id="complaintName" type="text" class="form-control" placeholder="Full name">
+            </div>
+            <div class="col-12">
+              <label for="complaintEmail" class="form-label">Email</label>
+              <input id="complaintEmail" type="email" class="form-control" placeholder="name@example.com">
+            </div>
+            <div class="col-12">
+              <label for="complaintType" class="form-label">Complaint Type</label>
+              <select id="complaintType" class="form-select">
+                <option selected>Select complaint type</option>
+                <option>Equipment issue</option>
+                <option>Booking conflict</option>
+                <option>Staff concern</option>
+                <option>Facility issue</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label for="complaintDetails" class="form-label">Details</label>
+              <textarea
+                id="complaintDetails"
+                class="form-control"
+                rows="4"
+                placeholder="Describe your complaint clearly"
+              ></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-success px-4">Submit Complaint</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
