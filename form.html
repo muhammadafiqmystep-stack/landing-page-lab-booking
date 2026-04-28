@@ -1,4 +1,13 @@
 <style>
+    :root {
+      --sky-blue: #87ceeb;
+      --sky-blue-dark: #4da6d9;
+      --leaf-green: #4f9d69;
+      --leaf-green-soft: #dff5e8;
+      --surface: #f4fbff;
+      --text-dark: #17415a;
+    }
+
     button {
         background-color: #4CAF50;
         color: white;
@@ -12,29 +21,34 @@
         margin-top: 20px;
     }
 </style>
-<form>
-    <div>
-        <p>Select a lab</p>
-        <input type="text" name="lab" id="lab">
-        <p>Select a date</p>
-        <input type="date" name="date" id="date">
-        <p>Select a time</p>
-        <input type="time" name="time" id="time">
-        <p>Select a user</p>
-        <input type="text" name="user" id="user">  
-        <p>Select a purpose</p>
-        <input type="text" name="purpose" id="purpose">
-        <p>Select a equipment</p>
-        <input type="text" name="equipment" id="equipment">
-        <p>Select a staff</p>
-        <input type="text" name="staff" id="staff">
-        <p>Select a location</p>
-        <input type="text" name="location" id="location">
-        <p>Select a payment method</p>
-        <input type="text" name="payment method" id="payment method">
+
+<div class="container py-4 py-md-5">
+    <div class="row align-items-center g-4">
+        <form>
+            <div>
+                <p>Select a lab</p>
+                <input type="text" name="lab" id="lab">
+                <p>Select a date</p>
+                <input type="date" name="date" id="date">
+                <p>Select a time</p>
+                <input type="time" name="time" id="time">
+                <p>Select a user</p>
+                <input type="text" name="user" id="user">  
+                <p>Select a purpose</p>
+                <input type="text" name="purpose" id="purpose">
+                <p>Select a equipment</p>
+                <input type="text" name="equipment" id="equipment">
+                <p>Select a staff</p>
+                <input type="text" name="staff" id="staff">
+                <p>Select a location</p>
+                <input type="text" name="location" id="location">
+                <p>Select a payment method</p>
+                <input type="text" name="payment method" id="payment method">
+            </div>
+            <div class="button-container">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
     </div>
-    <div class="button-container">
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
-    </div>
-</form>
+</div>
